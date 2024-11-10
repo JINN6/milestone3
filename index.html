@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="h">Interactive Resume Builder</h1>
+        <form id="resume-form">
+            <fieldset>
+                <legend><b>Personal Information</b></legend>
+                <label for="name">Name:</label>
+                <span id="name-output" class="editable" onclick="editText(event)">M.Faiz</span>
+
+                <label for="Email">Email:</label>
+                <span id="email-output" class="editable" onclick="editText(event)">Faiz@example.com</span>
+
+                <label for="Phone">Phone:</label>
+                <span id="phone-output" class="editable" onclick="editText(event)">123-456-7890</span>
+
+                <label>Gender:</label>
+
+                <input type="radio" id="male" name="gender" value="Male" onclick="editGender(event)" checked> Male
+                <input type="radio" id="female" name="gender" value="Female" onclick="editGender(event)"> Female
+                <input type="radio" id="other" name="gender" value="Other" onclick="editGender(event)"> Other
+
+            </fieldset>
+            <fieldset>
+                <legend><b>Education</b></legend>
+                <span id="education-output" class="editable" onclick="editText(event)">Bachelor's Degree</span>
+            </fieldset>
+            <fieldset>
+                <legend><b>Experience</b></legend>
+                <span id="experience-output" class="editable" onclick="editText(event)">2 years at XYZ Company</span>
+            </fieldset>
+            <fieldset>
+                <legend><b>Skills</b></legend>
+                <span id="skills-output" class="editable" onclick="editText(event)">JavaScript, TypeScript, React</span>
+            </fieldset>
+        </form>
+
+        <button id="save-resume" type="button">Save Resume</button>
+        <div id="resume-output"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
